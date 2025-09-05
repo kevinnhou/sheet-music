@@ -1,0 +1,7 @@
+{
+  "title": "Module 8",
+  "description": "From the Universe to the Atom",
+  "icon": "Atom",
+  "root": true,
+  "pages": ["index"]
+}

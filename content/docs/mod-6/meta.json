@@ -1,0 +1,26 @@
+{
+  "title": "Module 6",
+  "description": "Electromagnetism",
+  "icon": "Magnet",
+  "root": true,
+  "pages": [
+    "index",
+    "---Charged Particles and Fields---",
+    "electric",
+    "magnetic",
+    "trajectories",
+    "---Motor Effect---",
+    "conductors",
+    "parallel",
+    "ampere",
+    "---Electromagnetic Induction---",
+    "flux",
+    "emf",
+    "transformers",
+    "---Applications of the Motor Effect---",
+    "motors",
+    "generators",
+    "induction-motors",
+    "conservation"
+  ]
+}

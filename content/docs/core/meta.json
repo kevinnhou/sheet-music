@@ -1,0 +1,7 @@
+{
+  "title": "Core",
+  "description": "Holistics",
+  "icon": "BookMarked",
+  "root": true,
+  "pages": ["index"]
+}

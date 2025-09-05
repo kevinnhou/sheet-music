@@ -1,0 +1,21 @@
+{
+  "title": "Module 5",
+  "description": "Advanced Mechanics",
+  "icon": "ChartNoAxesGantt",
+  "root": true,
+  "pages": [
+    "index",
+    "---Projectile Motion---",
+    "components",
+    "relationships",
+    "---Circular Motion---",
+    "uniform",
+    "tension",
+    "curves",
+    "torque",
+    "energy",
+    "---Gravitational Motion---",
+    "universal",
+    "orbits"
+  ]
+}

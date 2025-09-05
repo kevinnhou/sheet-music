@@ -1,0 +1,28 @@
+{
+  "title": "Module 7",
+  "description": "Nature of Light",
+  "icon": "Lightbulb",
+  "root": true,
+  "pages": [
+    "index",
+    "---EM Spectrum---",
+    "maxwell",
+    "em-waves",
+    "speed",
+    "spectra",
+    "---Wave Model---",
+    "models",
+    "diffraction",
+    "polarisation",
+    "---Quantum Model---",
+    "black-body",
+    "photoelectric",
+    "---Special Relativity---",
+    "frames",
+    "classical",
+    "special",
+    "evidence",
+    "relativistic",
+    "mass-energy"
+  ]
+}
