@@ -2,3 +2,8 @@
 title: Core
 description: Essentials
 ---
+
+import { GraphView } from '@/components/graph-view';
+import { buildGraph } from '@/lib/build-graph';
+
+<GraphView graph={buildGraph()} />
