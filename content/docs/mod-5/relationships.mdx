@@ -2,3 +2,139 @@
 title: Relationships
 description: Relationship
 ---
+
+## SUVAT
+
+Set of equations that describe the motion of an object under constant acceleration.
+
+
+### Derivation
+
+Consider an object moving in a straight line with constant acceleration $a$:
+
+- Let $u$ be the initial velocity (at time $t = 0$).
+- Let $v$ be the final velocity after time $t$.
+
+By definition, acceleration is the rate of change of velocity:
+
+$$
+\frac{v - u}{t} = a
+$$
+
+Rearrange to solve for $v$:
+
+$$
+\begin{equation}
+  \begin{split}
+    v - u &= at \\
+    v &= u + at
+  \end{split}
+\end{equation}
+$$
+
+$ \because $ constant acceleration, average velocity, $\bar{v}$ is:
+
+$$
+\bar{v} = \frac{u + v}{2}
+$$
+
+The displacement $s$ after time $t$ is:
+
+$$
+s = \bar{v} t = \frac{u + v}{2} t
+$$
+
+Substitute $v = u + at$ into the above to solve for $s$:
+
+$$
+\begin{equation}
+  \begin{split}
+    s &= \frac{u + (u + at)}{2} t \\
+      &= \frac{2*u + at}{2} t \\
+      &= ut + \frac{1}{2} a t^2
+  \end{split}
+\end{equation}
+$$
+
+Alternatively, to eliminate $t$, start with $v = u + at$ and rearrange for $t$:
+
+$$
+t = \frac{v - u}{a}
+$$
+
+Substitute this into $s = \frac{u + v}{2} t$:
+
+$$
+\begin{equation}
+\begin{split}
+s &= \frac{u + v}{2} \cdot \frac{v - u}{a} \\
+  &= \frac{(u + v)(v - u)}{2*a} \\
+  &= \frac{v^2 - u^2}{2*a}
+\end{split}
+\end{equation}
+$$
+
+Rearrange to get:
+
+$$
+v^2 = u^2 + 2as
+$$
+
+export const SUVAT = `
+\\begin{alignedat}{3}
+   v &= u + at \\\\
+   s &= ut + \\frac{1}{2} a t^2 \\\\
+   v^2 &= u^2 + 2as
+\\end{alignedat}
+`
+
+<BoxedEnvironment latex={SUVAT} title="SUVAT Equations" collapsible="true" />
+
+### Initial Velocity
+
+Given angle $\theta$ and initial velocity $u$, the initial velocity can be resolved into horizontal and vertical components [^1]:
+
+$$
+\begin{alignedat}{2}
+   u_x &= u \cos\theta \quad &&\text{(horizontal component)} \\
+   u_y &= u \sin\theta \quad &&\text{(vertical component)}
+\end{alignedat}
+$$
+
+### Maximum Height
+
+Reached at the apex where vertical velocity is $0$. 
+
+$$ \therefore u \sin\theta - gt = 0 $$ where $$ t = \frac{u \sin\theta}{g} $$
+
+Substitute this into vertical motion:
+
+$$
+s = u \sin\theta \cdot \frac{u \sin\theta}{g} - \frac{1}{2} g \left(\frac{u \sin\theta}{g}\right)^2
+$$
+
+$$
+s = \frac{u^2 \sin^2\theta}{2g}
+$$
+
+### Time of Flight
+
+Since Projectile motion is symmetrical, the time of flight is twice the time to reach the maximum height.
+
+$$
+t = \frac{2u \sin\theta}{g}
+$$
+
+### Range
+
+Substitute the time of flight into horizontal motion:
+
+$$
+\begin{alignedat}{3}
+  s &= u \cos\theta \cdot \frac{2u \sin\theta}{g} \\
+    &= \frac{2u^2 \sin\theta \cos\theta}{g} \\
+    &= \frac{u^2 \sin(2\theta)}{g}
+\end{alignedat}
+$$
+
+[^1]: See [**Components**](/mod-5/components).

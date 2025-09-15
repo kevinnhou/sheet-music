@@ -2,3 +2,39 @@
 title: Components
 description: Components
 ---
+
+> Projectile Motion refers to the curved trajectory an object follows when it is thrown near the Earth's surface, moving under the influence of gravity alone.
+
+## Assumptions
+
+- No Air Resistance
+- Constant Vertical Acceleration due to gravity
+
+Projectile Motion can be resolved into the rectilinear motion of the horizontal and vertical components.
+
+## Horizontal Motion
+
+Rectilinear motion with constant velocity.
+
+export const horizontalSuvat = `
+\\begin{alignedat}{2}
+   v_x &= u_x \\\\
+   s_x &= u_x t
+\\end{alignedat}
+`
+
+<BoxedEnvironment latex={horizontalSuvat} title="Horizontal Equations" collapsible="true" />
+
+## Vertical Motion
+
+Rectilinear motion with constant acceleration due to gravity.
+
+export const verticalSuvat = `
+\\begin{alignedat}{3}
+   v_y &= u_x - gt \\\\
+   s_y &= u_x t - \\frac{1}{2} g t^2 \\\\
+   v_y^2 &= u_x^2 - 2g s_y
+\\end{alignedat}
+`
+
+<BoxedEnvironment latex={verticalSuvat} title="Vertical Equations" collapsible="true" />
