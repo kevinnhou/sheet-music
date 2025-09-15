@@ -32,7 +32,7 @@ type BoxedEnvironmentProps = {
 } & VariantProps<typeof boxedEnvironmentVariants>;
 
 const VARIANT = {
-  theorem: {
+  formula: {
     text: "text-blue-700 dark:text-blue-300",
     border: "border-blue-300 dark:border-blue-700",
     bg: "bg-blue-50/80 dark:bg-blue-950/40",
@@ -95,7 +95,7 @@ function mapValues<T extends Record<string, U>, U, R>(
   return out;
 }
 
-const DEFAULT_VARIANT: VariantKey = "theorem";
+const DEFAULT_VARIANT: VariantKey = "formula";
 
 const containerByVariant = mapValues(VARIANT, (v: VariantStyle) => [
   v.border,
@@ -167,7 +167,7 @@ const headerVariants = cva(
 );
 
 const variantIcons = {
-  theorem: BookOpen,
+  formula: BookOpen,
   proof: Search,
   definition: BookMarked,
   example: Lightbulb,
@@ -180,7 +180,7 @@ const variantLabels: Record<
   NonNullable<BoxedEnvironmentProps["variant"]>,
   string
 > = {
-  theorem: "Theorem",
+  formula: "Formula",
   proof: "Proof",
   definition: "Definition",
   example: "Example",
@@ -206,7 +206,7 @@ export function BoxedEnvironment({
   number,
   collapsible = false,
   defaultOpen = true,
-  variant = "theorem",
+  variant = "formula",
   className = "",
 }: BoxedEnvironmentProps) {
   const content = useMemo(() => {
@@ -225,14 +225,13 @@ export function BoxedEnvironment({
     }
     return katex.renderToString(content, {
       displayMode: true,
-      throwOnError: true,
-      strict: false,
+      throwOnError: false,
       trust: true,
       fleqn: true,
     });
   }, [content]);
 
-  const label = variantLabels[variant ?? "theorem"];
+  const label = variantLabels[variant ?? "formula"];
 
   const computedId = useMemo(() => {
     if (id && id.trim().length > 0) {
@@ -252,7 +251,7 @@ export function BoxedEnvironment({
     await navigator.clipboard.writeText(url);
   }
 
-  const IconComponent = variantIcons[variant ?? "theorem"];
+  const IconComponent = variantIcons[variant ?? "formula"];
 
   return (
     <section
@@ -312,10 +311,10 @@ export function BoxedEnvironment({
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         )}
       >
-        <div className="overflow-hidden">
+        <div className="mx-auto overflow-hidden">
           <div
             className={cn(
-              "py-2 transition-opacity duration-200 sm:py-3",
+              "py-px transition-opacity duration-200",
               open ? "opacity-100" : "opacity-0"
             )}
           >
@@ -331,8 +330,8 @@ export function BoxedEnvironment({
   );
 }
 
-export const BoxedTheorem: MDXComponents["BoxedTheorem"] = (props) => (
-  <BoxedEnvironment {...props} variant="theorem" />
+export const BoxedFormula: MDXComponents["BoxedFormula"] = (props) => (
+  <BoxedEnvironment {...props} variant="formula" />
 );
 
 export const BoxedProof: MDXComponents["BoxedProof"] = (props) => (

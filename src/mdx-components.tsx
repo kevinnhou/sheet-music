@@ -4,10 +4,10 @@ import {
   BoxedDefinition,
   BoxedEnvironment,
   BoxedExample,
+  BoxedFormula,
   BoxedInfo,
   BoxedNote,
   BoxedProof,
-  BoxedTheorem,
   BoxedWarning,
 } from "@/components/boxed-environment";
 import { Mermaid } from "@/components/mermaid";
@@ -17,7 +17,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ...defaultMdxComponents,
     Mermaid,
     BoxedEnvironment,
-    BoxedTheorem,
+    BoxedFormula,
     BoxedProof,
     BoxedDefinition,
     BoxedExample,
