@@ -1,14 +1,12 @@
 ---
-title: Relationships
-description: Relationship
+title: SUVAT
+description: SUVAT
 ---
-
-## SUVAT
 
 Set of equations that describe the motion of an object under constant acceleration.
 
 
-### Derivation
+## Derivation
 
 Consider an object moving in a straight line with constant acceleration $a$:
 
@@ -41,7 +39,11 @@ $$
 The displacement $s$ after time $t$ is:
 
 $$
-s = \bar{v} t = \frac{u + v}{2} t
+\begin{alignedat}{2}
+  s &= \bar{v} t \\
+    &= \frac{u + v}{2} t
+\end{alignedat}
+
 $$
 
 Substitute $v = u + at$ into the above to solve for $s$:
@@ -66,11 +68,11 @@ Substitute this into $s = \frac{u + v}{2} t$:
 
 $$
 \begin{equation}
-\begin{split}
-s &= \frac{u + v}{2} \cdot \frac{v - u}{a} \\
-  &= \frac{(u + v)(v - u)}{2*a} \\
-  &= \frac{v^2 - u^2}{2*a}
-\end{split}
+  \begin{split}
+    s &= \frac{u + v}{2} \cdot \frac{v - u}{a} \\
+      &= \frac{(u + v)(v - u)}{2*a} \\
+      &= \frac{v^2 - u^2}{2*a}
+  \end{split}
 \end{equation}
 $$
 
@@ -90,18 +92,18 @@ export const SUVAT = `
 
 <BoxedEnvironment latex={SUVAT} title="SUVAT Equations" collapsible="true" />
 
-### Initial Velocity
+## Initial Velocity
 
 Given angle $\theta$ and initial velocity $u$, the initial velocity can be resolved into horizontal and vertical components [^1]:
 
 $$
 \begin{alignedat}{2}
-   u_x &= u \cos\theta \quad &&\text{(horizontal component)} \\
-   u_y &= u \sin\theta \quad &&\text{(vertical component)}
+  u_x &= u \cos\theta \quad &&\text{(horizontal component)} \\
+  u_y &= u \sin\theta \quad &&\text{(vertical component)}
 \end{alignedat}
 $$
 
-### Maximum Height
+## Maximum Height
 
 Reached at the apex where vertical velocity is $0$. 
 
@@ -117,7 +119,7 @@ $$
 s = \frac{u^2 \sin^2\theta}{2g}
 $$
 
-### Time of Flight
+## Time of Flight
 
 Since Projectile motion is symmetrical, the time of flight is twice the time to reach the maximum height.
 
@@ -125,7 +127,7 @@ $$
 t = \frac{2u \sin\theta}{g}
 $$
 
-### Range
+## Range
 
 Substitute the time of flight into horizontal motion:
 
