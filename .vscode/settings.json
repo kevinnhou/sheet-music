@@ -1,20 +1,30 @@
 {
   "files.exclude": {
-    ".source": true,
+    ".cursor": true,
     ".husky": true,
     ".next": true,
+    ".source": true,
 
+    ".gitignore": true,
     "node_modules": true,
     "biome.jsonc": true,
     "bun.lock": true,
+    "cli.json": true,
     "components.json": true,
     "next-env.d.ts": true,
     "next.config.mjs": true,
     "postcss.config.mjs": true,
+    "README.md": true,
     "source.config.ts": true,
     "tsconfig.json": true,
 
-    "**/src": false
+    "**/src": true,
+
+    "**/core": true,
+    "**/mod-5": false,
+    "**/mod-6": true,
+    "**/mod-7": true,
+    "**/mod-8": true
   },
   "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome"
